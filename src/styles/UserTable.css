@@ -1,0 +1,131 @@
+/* User Table Styling */
+.UserTable {
+  width: 960px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  table-layout: fixed;
+
+  /* Cell Styling */
+  & thead th,
+  tbody td {
+    border-bottom: 1px solid var(--line);
+    padding: 14px 16px;
+  }
+
+  & thead th {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: left;
+    background: var(--surface-2);
+  }
+
+  & tbody td {
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: var(--surface);
+  }
+
+  & tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  /* Column Widths and Styling */
+  & th:nth-child(1),
+  td:nth-child(1) {
+    width: 30%;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  & th:nth-child(2),
+  td:nth-child(2) {
+    width: 32%;
+  }
+
+  & th:nth-child(3) {
+    width: 14%;
+    text-align: center;
+  }
+
+  & td:nth-child(3) {
+    width: 14%;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  & th:nth-child(4),
+  td:nth-child(4) {
+    width: 24%;
+    text-align: right;
+  }
+
+  & td:nth-child(2) {
+    color: var(--muted);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 13px;
+  }
+
+  & td[colspan] {
+    white-space: normal;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    background: var(--surface-2);
+  }
+
+  /* Action Buttons Styling */
+  & td:last-child button {
+    border: 1px solid var(--line);
+    background: #3a3e50;
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  & td:last-child button + button {
+    margin-left: 6px;
+  }
+
+  & td:last-child button:hover {
+    background: var(--accent);
+    color: #282a36;
+    border-color: var(--accent);
+  }
+
+  & td:last-child button:active {
+    background: var(--accent-2);
+    border-color: var(--accent-2);
+  }
+
+  & td:last-child button:last-of-type {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--danger) 18%, transparent),
+      color-mix(in oklab, var(--danger) 12%, transparent)
+    );
+    border-color: color-mix(in oklab, var(--danger), #000 30%);
+    color: color-mix(in oklab, var(--text), var(--danger) 22%);
+
+    & :hover {
+      background: linear-gradient(
+        180deg,
+        color-mix(in oklab, var(--danger) 28%, transparent),
+        color-mix(in oklab, var(--danger) 18%, transparent)
+      );
+    }
+  }
+  & th.sortable {
+    cursor: pointer;
+    user-select: none;
+  }
+}

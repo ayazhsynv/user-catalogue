@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "name": "James Doakes",
+      "email": "james.d@company.com",
+      "role": "admin",
+      "id": "bd35"
+    },
+    {
+      "id": "d5ce",
+      "name": "John Doe",
+      "email": "john.doe@mail.com",
+      "role": "user"
+    },
+    {
+      "id": "d2c5",
+      "name": "Boyle Drews",
+      "email": "boyle.drews@company.com",
+      "role": "manager"
+    },
+    {
+      "id": "c05c",
+      "name": "Ayaz Huseynov",
+      "email": "ayazhuseynov@proton.me",
+      "role": "user"
+    },
+    {
+      "id": "32dc",
+      "name": "Jane Carter",
+      "email": "carter.jane@gmail.com",
+      "role": "user"
+    },
+    {
+      "id": "5bda",
+      "name": "Terry Andrews",
+      "email": "terry.and@mail.com",
+      "role": "admin"
+    }
+  ]
+}

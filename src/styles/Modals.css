@@ -1,0 +1,113 @@
+/* Modal overlays */
+.UserAddModalOverlay,
+.UserDeleteModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+}
+
+/* Modal content */
+.UserAddModal,
+.UserDeleteModal {
+  width: min(520px, 92vw);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.UserAddModal h2,
+.UserDeleteModal h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+/* Form styling */
+.UserForm {
+  display: grid;
+  gap: 12px;
+}
+
+.UserForm label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.UserForm input,
+.UserForm select {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  outline: none;
+}
+
+.UserForm input:focus,
+.UserForm select:focus {
+  border-color: var(--accent);
+}
+
+.FormError {
+  margin: 4px 0 0;
+  color: var(--danger);
+  font-size: 13px;
+}
+
+/* Modal actions */
+.ModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ModalActions button {
+  border: 1px solid var(--line);
+  background: #3a3e50;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Primary action for Add modal (Save) */
+.UserAddModal .ModalActions button[type="submit"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #282a36;
+}
+
+/* Danger action for Delete modal (Delete) */
+.UserDeleteModal .ModalActions button:last-child {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--danger) 18%, transparent),
+    color-mix(in oklab, var(--danger) 12%, transparent)
+  );
+  border-color: color-mix(in oklab, var(--danger), #000 30%);
+  color: color-mix(in oklab, var(--text), var(--danger) 22%);
+
+  & :hover {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--danger) 28%, transparent),
+      color-mix(in oklab, var(--danger) 18%, transparent)
+    );
+  }
+}
+
+.ModalActions button[disabled] {
+  opacity: 0.7;
+  cursor: default;
+}
