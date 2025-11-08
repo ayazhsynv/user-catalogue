@@ -1,4 +1,4 @@
-# Kiçik İstifadəçi Kataloqu: siyahı + axtarış + əlavə/düzəliş/silmə
+# Kiçik İstifadəçi Kataloqu
 
 ## Istifadə Olunanlar
 
