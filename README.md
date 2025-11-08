@@ -2,9 +2,9 @@
 
 ## Istifadə Olunanlar
 
--React JSX
--CSS
--API kimi JSON-Server ilə db.json (PORT 8000)
+- React JSX
+- CSS
+- API kimi JSON-Server ilə db.json (PORT 8000)
 
 ## Funksionallıq
 
